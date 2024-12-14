@@ -23,7 +23,6 @@ namespace BankAPI.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {
-            
             await _userRepo.AddUserAsync(user);
             return Ok(user);
         }

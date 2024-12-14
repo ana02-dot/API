@@ -1,5 +1,6 @@
 ﻿using BankAPI.Data;
 using BankAPI.Entities;
+using BankAPI.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,75 +13,94 @@ namespace BankAPI.Controllers
     public class AccountController : ControllerBase
     {
         private readonly DataContext _dataContext;
-        public AccountController(DataContext dataContext)
+        private readonly IAccountRepository _accountRepo;
+
+        public AccountController(DataContext dataContext, IAccountRepository accountRepo)
         {
             _dataContext = dataContext;
+            _accountRepo = accountRepo;
         }
 
         [HttpPost("open")]
         public async Task<ActionResult<Account>> OpenAccount([FromBody] Account account)
         {
-            account.CreatedDate = DateTime.Now;
-            account.Status = "Active";
-            _dataContext.Accounts.Add(account);
-            await _dataContext.SaveChangesAsync();
+            await _accountRepo.OpenAccountAsync(account);
             return Ok(account);
         }
 
         [HttpPost("{id}/deposit")]
         public async Task<ActionResult> Deposit(int id, [FromBody] decimal amount)
         {
-            var account = await _dataContext.Accounts.FindAsync(id);
-            if (account == null) return NotFound("Account not found");
+            try
+            {
+                if (amount <= 0)
+                {
+                    return BadRequest("Deposit amount must be greater than zero.");
+                }
 
-            account.Balance += amount;
-            await _dataContext.SaveChangesAsync();
-            return Ok(account);
+                // Call repository method to update the account balance
+                var account = await _accountRepo.AddDepositAsync(id, amount);
+
+                if (account == null)
+                {
+                    return NotFound($"Account with ID {id} not found.");
+                }
+
+                return Ok(account);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
         }
 
         [HttpPost("{id}/withdraw")]
         public async Task<ActionResult> Withdraw(int id, [FromBody] decimal amount)
         {
-            var account = await _dataContext.Accounts.FindAsync(id);
-            if (account == null) return NotFound("Account not found");
+            try
+            {
+                if (amount <= 0)
+                {
+                    return BadRequest("Deposit amount must be greater than zero.");
+                }
 
-            if (account.Balance < amount) return BadRequest("Insufficient balance");
+                var account = await _accountRepo.AddWithdrawAsync(id, amount);
 
-            account.Balance -= amount;
-            await _dataContext.SaveChangesAsync();
-            return Ok(account);
+                if (account == null)
+                {
+                    return NotFound($"Account with ID {id} not found.");
+                }
+
+                return Ok(account);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
+          
         }
 
 
-        [HttpPost("transfer")]
-        public async Task<ActionResult> Transfer([FromBody] Transaction transaction)
-        {
-            var fromAccount = await _dataContext.Accounts.FindAsync(transaction.FromAccountID);
-            var toAccount = await _dataContext.Accounts.FindAsync(transaction.ToAccountID);
-
-            if (fromAccount == null || toAccount == null)
-                return NotFound("One or both accounts not found");
-
-            if (fromAccount.Balance < transaction.Amount)
-                return BadRequest("Insufficient balance");
-
-            fromAccount.Balance -= transaction.Amount;
-            toAccount.Balance += transaction.Amount;
-
-            transaction.TransactionDate = DateTime.UtcNow;
-            transaction.Status = "Completed";
-
-            _dataContext.Transactions.Add(transaction);
-            await _dataContext.SaveChangesAsync();
-
-            return Ok("Transfer successful");
-        }
+       
 
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<List<Account>>> GetUserAccounts(int userId)
         {
-            var accounts = await _dataContext.Accounts.Where(a => a.UserID == userId).ToListAsync();
-            return Ok(accounts);
+            try
+            {
+                var accounts = await _accountRepo.GetAccountsAsyncByUserId(userId);
+
+                if (accounts == null || accounts.Count == 0)
+                {
+                    return NotFound($"No accounts found for user ID {userId}.");
+                }
+
+                return Ok(accounts);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"An error occurred: {ex.Message}");
+            }
         }
 
     }
