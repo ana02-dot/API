@@ -4,7 +4,7 @@ namespace BankAPI.Interfaces
 {
     public interface IUserRepository
     {
-        Task AddUserAsync(User user);   
+        Task <User> AddUserAsync(User user);   
 
     }
 }

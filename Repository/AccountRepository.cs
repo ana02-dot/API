@@ -10,64 +10,118 @@ namespace BankAPI.Repository
     public class AccountRepository : IAccountRepository
     {
         private readonly DataContext _dataContext;
+
         public AccountRepository(DataContext dataContext)
         {
             _dataContext = dataContext;
-
         }
 
         public async Task<Account?> AddDepositAsync(int id, decimal amount)
         {
-            var account = await _dataContext.Accounts.FindAsync(id);
+            if (amount <= 0)
+                throw new ArgumentException("Deposit amount must be greater than zero.");
 
-            // Return null if the account doesn't exist
-            if (account == null) return null;
+            using var transaction = await _dataContext.Database.BeginTransactionAsync();
+            try
+            {
+                var account = await _dataContext.Accounts.FindAsync(id)
+                              ?? throw new KeyNotFoundException("Account not found.");
 
-            // Update the balance
-            account.Balance += amount;
+                if (account.Status != "Active")
+                    throw new InvalidOperationException("Account is not active.");
 
-            // Save changes to the database
-            _dataContext.Accounts.Update(account);
-            await _dataContext.SaveChangesAsync();
+                account.Balance += amount;
 
-            return account;
+                _dataContext.Accounts.Update(account);
+                await _dataContext.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return account;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
 
         }
 
-       
+
 
         public async Task<Account?> AddWithdrawAsync(int id, decimal amount)
         {
-            var account = await _dataContext.Accounts.FindAsync(id);
+            if (amount <= 0)
+                throw new ArgumentException("Withdrawal amount must be greater than zero.");
 
-            if (account == null) 
-                return null;
-
-            if (account.Balance < amount)
-                Console.WriteLine("Insufficient balance");
-
-            account.Balance -= amount;
             
-            _dataContext.Accounts.Update(account);
-            await _dataContext.SaveChangesAsync();
-            return account;
+            using var transaction = await _dataContext.Database.BeginTransactionAsync();
+            try
+            {
+                var account = await _dataContext.Accounts.FindAsync(id)
+                              ?? throw new KeyNotFoundException("Account not found.");
+
+                if (account.Status != "Active")
+                    throw new InvalidOperationException("Account is not active.");
+
+                if (account.Balance < amount)
+                    throw new InvalidOperationException("Insufficient balance.");
+
+                account.Balance -= amount;
+
+                _dataContext.Accounts.Update(account);
+                await _dataContext.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return account;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw; 
+            }
+
         }
 
-       
-        public async Task <List<Account>> GetAccountsAsyncByUserId(int userId)
+
+        public async Task<List<Account>> GetAccountsAsyncByUserId(int userId)
         {
-            return await _dataContext.Accounts
-                       .Where(a => a.UserID == userId)
-                       .ToListAsync();
+            var accounts = await _dataContext.Accounts
+                               .Where(a => a.UserID == userId)
+                               .ToListAsync();
+
+            return accounts.Any()
+                ? accounts
+                : throw new KeyNotFoundException("No accounts found for the user.");
+           
+
         }
 
 
-        public async Task OpenAccountAsync(Account account)
+        public async Task<Account> OpenAccountAsync(Account account)
         {
-            account.CreatedDate = DateTime.Now;
+            if (account == null)
+                throw new ArgumentException("Account data is required.");
+
+            var user = await _dataContext.Users.FindAsync(account.UserID)
+                       ?? throw new KeyNotFoundException("User not found.");
+
+            account.CreatedDate = DateTime.UtcNow;
             account.Status = "Active";
+
             _dataContext.Accounts.Add(account);
             await _dataContext.SaveChangesAsync();
+
+            return new Account
+            {
+                ID = account.ID,
+                AccountNumber = account.AccountNumber,
+                Balance = account.Balance,
+                Currency = account.Currency,
+                AccountType = account.AccountType,
+                UserID = account.UserID,
+                CreatedDate = account.CreatedDate,
+                Status = account.Status
+            };
         }
     }
 }

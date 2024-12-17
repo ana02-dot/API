@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Transactions;
-using Transaction = BankAPI.Entities.Transaction;
 
 namespace BankAPI.Controllers
 {
@@ -26,28 +25,29 @@ namespace BankAPI.Controllers
 
 
         [HttpGet("account/{accountId}")]
-        public async Task<ActionResult<List<Transaction>>> GetTransactionHistory(int accountId)
+        public async Task<ActionResult<List<BankTransactions>>> GetTransactionHistory(int accountId)
         {
-            try
-            {
-                var transactions = await _transactionRepo.GetTransactionsByAccIdAsync(accountId);
-
-                if (transactions == null || transactions.Count == 0)
-                {
-                    return NotFound("No transactions found for this account.");
-                }
-
-                return Ok(transactions);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"An error occurred: {ex.Message}");
-            }
             
-            
+            var transactions = await _transactionRepo.GetTransactionsByAccIdAsync(accountId);
+
+            if (transactions == null || transactions.Count == 0)
+            {
+                throw new KeyNotFoundException("No transactions found for this account.");
+            }
+
+            return Ok(transactions);
         }
-        
-           
-           
+
+
+        [HttpPost("transfer")]
+        public async Task<ActionResult> Transfer([FromBody] BankTransactions transaction)
+        {
+            var result = await _transactionRepo.TransferAsync(transaction);
+
+            return Ok(new { message = result });
+        }
+
+
+
     } 
 }

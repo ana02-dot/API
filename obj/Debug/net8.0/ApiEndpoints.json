@@ -44,7 +44,7 @@
   {
     "ContainingType": "BankAPI.Controllers.AccountController",
     "Method": "OpenAccount",
-    "RelativePath": "api/Account/open",
+    "RelativePath": "api/Account/openAccount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -66,22 +66,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "BankAPI.Controllers.AccountController",
-    "Method": "Transfer",
-    "RelativePath": "api/Account/transfer",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "transaction",
-        "Type": "BankAPI.Entities.Transaction",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "BankAPI.Controllers.AccountController",
@@ -125,7 +109,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[BankAPI.Entities.Transaction, BankAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[BankAPI.Entities.BankTransactions, BankAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -134,6 +118,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "BankAPI.Controllers.TransactionController",
+    "Method": "Transfer",
+    "RelativePath": "api/Transaction/transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "BankAPI.Entities.BankTransactions",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "BankAPI.Controllers.UserController",

@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace BankAPI.Entities
 {
@@ -22,12 +24,17 @@ namespace BankAPI.Entities
         public string AccountType { get; set; }
 
 
-        public int UserID { get; set; }
         public DateTime CreatedDate { get; set; }
 
         [Required(ErrorMessage = "Status is required.")]
         public string Status { get; set; }
 
 
+
+        [ForeignKey("User")]
+        public int UserID { get; set; }
+
+        [JsonIgnore]
+        public  User? User { get; set; }
     }
 }

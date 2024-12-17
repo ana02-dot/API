@@ -1,5 +1,6 @@
 using BankAPI.Data;
 using BankAPI.Interfaces;
+using BankAPI.Middleware;
 using BankAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +12,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -24,9 +24,13 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionsRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
+
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
+app.UseMiddleware<ExceptionHandler>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

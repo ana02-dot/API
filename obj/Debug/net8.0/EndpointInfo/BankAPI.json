@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Account/open": {
+    "/api/Account/openAccount": {
       "post": {
         "tags": [
           "Account"
@@ -143,37 +143,6 @@
         }
       }
     },
-    "/api/Account/transfer": {
-      "post": {
-        "tags": [
-          "Account"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Account/user/{userId}": {
       "get": {
         "tags": [
@@ -247,7 +216,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Transaction"
+                    "$ref": "#/components/schemas/BankTransactions"
                   }
                 }
               },
@@ -255,7 +224,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Transaction"
+                    "$ref": "#/components/schemas/BankTransactions"
                   }
                 }
               },
@@ -263,11 +232,42 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Transaction"
+                    "$ref": "#/components/schemas/BankTransactions"
                   }
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Transaction/transfer": {
+      "post": {
+        "tags": [
+          "Transaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankTransactions"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankTransactions"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankTransactions"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -324,6 +324,12 @@
   "components": {
     "schemas": {
       "Account": {
+        "required": [
+          "accountNumber",
+          "accountType",
+          "currency",
+          "status"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -331,37 +337,44 @@
             "format": "int32"
           },
           "accountNumber": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "balance": {
+            "minimum": 0,
             "type": "number",
             "format": "double"
           },
           "currency": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string"
           },
           "accountType": {
-            "type": "string",
-            "nullable": true
-          },
-          "userID": {
-            "type": "integer",
-            "format": "int32"
+            "minLength": 1,
+            "type": "string"
           },
           "createdDate": {
             "type": "string",
             "format": "date-time"
           },
           "status": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
       },
-      "Transaction": {
+      "BankTransactions": {
+        "required": [
+          "fromAccountID",
+          "status",
+          "toAccountID"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -377,6 +390,7 @@
             "format": "int32"
           },
           "amount": {
+            "minimum": 0,01,
             "type": "number",
             "format": "double"
           },
@@ -385,13 +399,19 @@
             "format": "date-time"
           },
           "status": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
       "User": {
+        "required": [
+          "email",
+          "firstName",
+          "lastName",
+          "personalNumber"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -399,23 +419,26 @@
             "format": "int32"
           },
           "firstName": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "lastName": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "personalNumber": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d{11}$",
+            "type": "string"
           },
           "email": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+            "type": "string"
           },
           "phoneNumber": {
             "type": "string",
+            "format": "tel",
             "nullable": true
           }
         },

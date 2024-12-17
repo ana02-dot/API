@@ -2,13 +2,13 @@
 
 namespace BankAPI.Entities
 {
-    public class Transaction
+    public class BankTransactions
     {
         public int ID { get; set; }
         [Required(ErrorMessage = "From Account ID is required.")]
         public int FromAccountID { get; set; }
 
-        [Required(ErrorMessage = "To Account ID is required.")] 
+        [Required(ErrorMessage = "To Account ID is required.")]
         public int ToAccountID { get; set; }
 
         [Range(0.01, double.MaxValue, ErrorMessage = "Amount must be greater than 0.")]
@@ -17,6 +17,5 @@ namespace BankAPI.Entities
 
         [Required(ErrorMessage = "Status is required.")]
         public string Status { get; set; }
-
     }
 }

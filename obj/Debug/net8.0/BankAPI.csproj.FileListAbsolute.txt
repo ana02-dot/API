@@ -337,10 +337,10 @@ D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets\msbuild.build.BankAPI.
 D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BankAPI.props
 D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BankAPI.props
 D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.csproj.Up2Date
 D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.dll
 D:\Desktop\repository-DI\obj\Debug\net8.0\refint\BankAPI.dll
 D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.pdb
 D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.genruntimeconfig.cache
 D:\Desktop\repository-DI\obj\Debug\net8.0\ref\BankAPI.dll
+D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
