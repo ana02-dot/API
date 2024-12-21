@@ -1,8 +1,9 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "BankAPI",
-    "version": "1.0"
+    "title": "Bank API",
+    "description": "A minimal API for managing bank transactions and users",
+    "version": "v1"
   },
   "paths": {
     "/api/Account/openAccount": {
@@ -10,7 +11,9 @@
         "tags": [
           "Account"
         ],
+        "summary": "Opens a new account for an existing user.",
         "requestBody": {
+          "description": "The account details to be created.",
           "content": {
             "application/json": {
               "schema": {
@@ -58,10 +61,12 @@
         "tags": [
           "Account"
         ],
+        "summary": "Deposits money into an account.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the account to deposit money into.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -70,6 +75,7 @@
           }
         ],
         "requestBody": {
+          "description": "The amount of money to deposit.",
           "content": {
             "application/json": {
               "schema": {
@@ -103,10 +109,12 @@
         "tags": [
           "Account"
         ],
+        "summary": "Withdraws money from an account.",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "The ID of the account to withdraw money from.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -115,6 +123,7 @@
           }
         ],
         "requestBody": {
+          "description": "The amount of money to withdraw.",
           "content": {
             "application/json": {
               "schema": {
@@ -148,10 +157,12 @@
         "tags": [
           "Account"
         ],
+        "summary": "Gets all accounts associated with a specific user.",
         "parameters": [
           {
             "name": "userId",
             "in": "path",
+            "description": "The ID of the user to fetch accounts for.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -197,10 +208,12 @@
         "tags": [
           "Transaction"
         ],
+        "summary": "Gets transaction history for a specific account.",
         "parameters": [
           {
             "name": "accountId",
             "in": "path",
+            "description": "The ID of the account to fetch transactions for.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -246,7 +259,9 @@
         "tags": [
           "Transaction"
         ],
+        "summary": "Transfers an amount of money between two accounts.",
         "requestBody": {
+          "description": "The transaction details.",
           "content": {
             "application/json": {
               "schema": {
@@ -277,7 +292,9 @@
         "tags": [
           "User"
         ],
+        "summary": "Registers a new user.",
         "requestBody": {
+          "description": "Details of the user to register.",
           "content": {
             "application/json": {
               "schema": {

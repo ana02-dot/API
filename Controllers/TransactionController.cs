@@ -24,6 +24,12 @@ namespace BankAPI.Controllers
         }
 
 
+        /// <summary>
+        /// Gets transaction history for a specific account.
+        /// </summary>
+        /// <param name="accountId">The ID of the account to fetch transactions for.</param>
+        /// <returns>A list of transactions.</returns>
+
         [HttpGet("account/{accountId}")]
         public async Task<ActionResult<List<BankTransactions>>> GetTransactionHistory(int accountId)
         {
@@ -38,7 +44,11 @@ namespace BankAPI.Controllers
             return Ok(transactions);
         }
 
-
+        /// <summary>
+        /// Transfers an amount of money between two accounts.
+        /// </summary>
+        /// <param name="transaction">The transaction details.</param>
+        /// <returns>A success message or error details.</returns>
         [HttpPost("transfer")]
         public async Task<ActionResult> Transfer([FromBody] BankTransactions transaction)
         {

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Desktop\\repository-DI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\interfaces\\icurrencyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:interfaces\\icurrencyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\repository\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:repository\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +18,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ICurrencyConverter.cs",
+              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Interfaces\\ICurrencyConverter.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICurrencyConverter.cs",
+              "ToolTip": "D:\\Desktop\\repository-DI\\Interfaces\\ICurrencyConverter.cs",
+              "RelativeToolTip": "Interfaces\\ICurrencyConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T13:36:26.287Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "TransactionsRepository.cs",
+              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Repository\\TransactionsRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TransactionsRepository.cs",
+              "ToolTip": "D:\\Desktop\\repository-DI\\Repository\\TransactionsRepository.cs",
+              "RelativeToolTip": "Repository\\TransactionsRepository.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAASwEEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:53:30.733Z",
+              "WhenOpened": "2024-12-21T14:02:21.992Z",
               "EditorCaption": ""
             }
           ]

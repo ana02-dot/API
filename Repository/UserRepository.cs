@@ -18,8 +18,7 @@ namespace BankAPI.Repository
             _dataContext.Users.Add(user);
             await _dataContext.SaveChangesAsync();
             return new User
-            {
-                Id = user.Id,
+            {   Id = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 PersonalNumber = user.PersonalNumber,

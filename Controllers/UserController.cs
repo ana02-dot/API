@@ -19,7 +19,13 @@ namespace BankAPI.Controllers
             _dataContext = dataContext;
         }
 
-       
+
+        /// <summary>
+        /// Registers a new user.
+        /// </summary>
+        /// <param name="user">Details of the user to register.</param>
+        /// <returns>The created user.</returns>
+        /// 
         [HttpPost("register")]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {

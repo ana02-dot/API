@@ -3,60 +3,12 @@
   "WorkspaceRootPath": "D:\\Desktop\\repository-DI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\middleware\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:middleware\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\interfaces\\icurrencyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:interfaces\\icurrencyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\repository\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:repository\\transactionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:interfaces\\itransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|d:\\desktop\\repository-di\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69598120-EBDC-491E-B823-EB3BC2F08272}|BankAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,192 +18,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ICurrencyConverter.cs",
+              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Interfaces\\ICurrencyConverter.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICurrencyConverter.cs",
+              "ToolTip": "D:\\Desktop\\repository-DI\\Interfaces\\ICurrencyConverter.cs",
+              "RelativeToolTip": "Interfaces\\ICurrencyConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T13:36:26.287Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Entities\\User.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Entities\\User.cs",
-              "RelativeToolTip": "Entities\\User.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:10:14.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Entities\\Account.cs",
-              "RelativeDocumentMoniker": "Entities\\Account.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Entities\\Account.cs",
-              "RelativeToolTip": "Entities\\Account.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwB0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:20:23.131Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Data\\DataContext.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Data\\DataContext.cs",
-              "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:10:51.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\UserRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:06:53.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:06:43.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T18:06:39.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "TransactionsRepository.cs",
               "DocumentMoniker": "D:\\Desktop\\repository-DI\\Repository\\TransactionsRepository.cs",
               "RelativeDocumentMoniker": "Repository\\TransactionsRepository.cs",
               "ToolTip": "D:\\Desktop\\repository-DI\\Repository\\TransactionsRepository.cs",
               "RelativeToolTip": "Repository\\TransactionsRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwEIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAASwEEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:52:54.043Z",
+              "WhenOpened": "2024-12-21T14:02:21.992Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TransactionController.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Controllers\\TransactionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TransactionController.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Controllers\\TransactionController.cs",
-              "RelativeToolTip": "Controllers\\TransactionController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:52:46.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ITransactionRepository.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Interfaces\\ITransactionRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ITransactionRepository.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Interfaces\\ITransactionRepository.cs",
-              "RelativeToolTip": "Interfaces\\ITransactionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:52:42.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Repository\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\AccountRepository.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Repository\\AccountRepository.cs",
-              "RelativeToolTip": "Repository\\AccountRepository.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAwHEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:20:29.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAccountRepository.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Interfaces\\IAccountRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IAccountRepository.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Interfaces\\IAccountRepository.cs",
-              "RelativeToolTip": "Interfaces\\IAccountRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T14:18:11.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:20:24.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExceptionHandler.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Middleware\\ExceptionHandler.cs",
-              "RelativeDocumentMoniker": "Middleware\\ExceptionHandler.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Middleware\\ExceptionHandler.cs",
-              "RelativeToolTip": "Middleware\\ExceptionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T10:50:02.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Desktop\\repository-DI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Desktop\\repository-DI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T15:53:30.733Z"
             }
           ]
         }

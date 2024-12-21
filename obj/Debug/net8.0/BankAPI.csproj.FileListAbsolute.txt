@@ -344,3 +344,6 @@ D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.pdb
 D:\Desktop\repository-DI\obj\Debug\net8.0\BankAPI.genruntimeconfig.cache
 D:\Desktop\repository-DI\obj\Debug\net8.0\ref\BankAPI.dll
 D:\Desktop\repository-DI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Desktop\repository-DI\bin\Debug\net8.0\AutoFixture.dll
+D:\Desktop\repository-DI\bin\Debug\net8.0\Fare.dll
+D:\Desktop\repository-DI\bin\Debug\net8.0\BankAPI.xml

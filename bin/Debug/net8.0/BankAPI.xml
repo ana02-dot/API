@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BankAPI</name>
+    </assembly>
+    <members>
+        <member name="M:BankAPI.Controllers.AccountController.OpenAccount(BankAPI.Entities.Account)">
+            <summary>
+            Opens a new account for an existing user.
+            </summary>
+            <param name="account">The account details to be created.</param>
+            <returns>The newly created account.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.AccountController.Deposit(System.Int32,System.Decimal)">
+            <summary>
+            Deposits money into an account.
+            </summary>
+            <param name="id">The ID of the account to deposit money into.</param>
+            <param name="amount">The amount of money to deposit.</param>
+            <returns>The updated account details after the deposit.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.AccountController.Withdraw(System.Int32,System.Decimal)">
+            <summary>
+            Withdraws money from an account.
+            </summary>
+            <param name="id">The ID of the account to withdraw money from.</param>
+            <param name="amount">The amount of money to withdraw.</param>
+            <returns>The updated account details after the withdrawal.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.AccountController.GetUserAccounts(System.Int32)">
+            <summary>
+            Gets all accounts associated with a specific user.
+            </summary>
+            <param name="userId">The ID of the user to fetch accounts for.</param>
+            <returns>A list of accounts belonging to the user.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.TransactionController.GetTransactionHistory(System.Int32)">
+            <summary>
+            Gets transaction history for a specific account.
+            </summary>
+            <param name="accountId">The ID of the account to fetch transactions for.</param>
+            <returns>A list of transactions.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.TransactionController.Transfer(BankAPI.Entities.BankTransactions)">
+            <summary>
+            Transfers an amount of money between two accounts.
+            </summary>
+            <param name="transaction">The transaction details.</param>
+            <returns>A success message or error details.</returns>
+        </member>
+        <member name="M:BankAPI.Controllers.UserController.RegisterUser(BankAPI.Entities.User)">
+            <summary>
+            Registers a new user.
+            </summary>
+            <param name="user">Details of the user to register.</param>
+            <returns>The created user.</returns>
+            
+        </member>
+    </members>
+</doc>

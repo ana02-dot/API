@@ -10,14 +10,12 @@ namespace BankAPI.Repository
 {
     public class TransactionsRepository :ITransactionRepository
     {
-
         private readonly DataContext _dataContext;
-
-
-
-        public TransactionsRepository(DataContext dataContext)
+        private readonly ICurrencyConverter _currencyConverter;
+        public TransactionsRepository(DataContext dataContext, ICurrencyConverter currencyConverter)
         {
             _dataContext = dataContext;
+            _currencyConverter = currencyConverter;
         }
 
         public async  Task <string> TransferAsync(BankTransactions BankTransactions)
@@ -39,6 +37,16 @@ namespace BankAPI.Repository
 
                 if (fromAccount.Balance < BankTransactions.Amount)
                     throw new InvalidOperationException("Insufficient balance in the source account.");
+
+
+
+                decimal convertedAmount = BankTransactions.Amount;
+                if (fromAccount.Currency != toAccount.Currency)
+                {
+                    convertedAmount = _currencyConverter.Convert(BankTransactions.Amount, fromAccount.Currency, toAccount.Currency);
+                }
+
+
 
                 // Update balances
                 fromAccount.Balance -= BankTransactions.Amount;
